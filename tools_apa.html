@@ -1,0 +1,329 @@
+<!doctype html>
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+	<title>APA - Editörü</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="ilhan er">
+	<meta name="description" content="APA - Editörü">
+	<meta name="viewport" content="width=device-width">
+	<meta name="generator" content="ilhan er" />
+	
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$("#b-KitapAPA").click(function()
+			{
+				var sonuc = "";
+				var data = $("#yazar-soyad").val();
+				data = toTitleCase(data); 
+				sonuc = data.trim();
+				
+				data = $("#yazar-ad").val().substring(0,1);
+				data = toUpperCase(data);
+				sonuc = sonuc + ", " + data.trim() + ".";
+				
+				data = $("#basim-yili").val();
+				sonuc = sonuc + " (" + data.trim() + ").";
+				
+				data = $("#kitap-adi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " <i>" + data.trim() + "</i>.";
+				
+				data = $("#basim-yeri").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ":";
+				
+				data = $("#yayinevi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ".";
+				
+				//$("#sonuc").text(sonuc);
+				document.getElementById("sonuc").innerHTML = sonuc;
+			}); 
+
+			$("#b-EditorluKitapAPA").click(function()
+			{
+				var sonuc = "";
+				var data = $("#editor-soyad").val();
+				data = toTitleCase(data); 
+				sonuc = data.trim()
+				
+				data = $("#editor-ad").val().substring(0,1);
+				data = toUpperCase(data);
+				sonuc = sonuc + ", " + data.trim() + ".";
+				
+				data = $("#basim-yili").val();
+				sonuc = sonuc + " ed. (" + data.trim() + ").";
+				
+				data = $("#kitap-adi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " <i>" + data.trim() + "</i>.";
+				
+				data = $("#basim-yeri").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ":";
+				
+				data = $("#yayinevi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ".";
+				
+				//$("#sonuc").text(sonuc);
+				document.getElementById("sonuc").innerHTML = sonuc;
+			}); 
+			
+			$("#b-BolumKitapAPA").click(function()
+			{
+				var sonuc = "";
+				var data = $("#byazar-soyad").val();
+				data = toTitleCase(data); 
+				sonuc = data.trim();
+				
+				data = $("#byazar-ad").val().substring(0,1);
+				data = toUpperCase(data);
+				sonuc = sonuc + ", " + data.trim() + ".";
+				
+				data = $("#basim-yili").val();
+				sonuc = sonuc + " (" + data.trim() + ").";
+				
+				data = $("#bolum-adi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ".";
+				
+				data = $("#editor-ad").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim();
+				
+				data = $("#editor-soyad").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + " (Ed.),";
+				
+				data = $("#kitap-adi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " <i>" + data.trim() + "</i> içinde (s.";
+				
+				data = $("#sayfa-araligi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + data.trim() + ").";
+				
+				data = $("#basim-yeri").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ":";
+				
+				data = $("#yayinevi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ".";
+				
+				//$("#sonuc").text(sonuc);
+				document.getElementById("sonuc").innerHTML = sonuc;	
+			}); 
+
+			$("#b-CeviriKitapAPA").click(function()
+			{
+				var sonuc = "";
+				var data = $("#yazar-soyad").val();
+				data = toTitleCase(data); 
+				sonuc = data.trim();
+				
+				data = $("#yazar-ad").val().substring(0,1);
+				data = toUpperCase(data);
+				sonuc = sonuc + ", " + data.trim() + ".";
+				
+				data = $("#basim-yili").val();
+				sonuc = sonuc + " (" + data.trim() + ").";
+				
+				data = $("#kitap-adi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " <i>" + data.trim() + "</i>.";
+				
+				data = $("#ceviren-ad").val().substring(0,1);
+				data = toTitleCase(data);
+				sonuc = sonuc + " (Çev. " + data.trim() + ". ";
+				
+				data = $("#ceviren-soyad").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ").";
+				
+				
+				data = $("#basim-yeri").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ":";
+				
+				data = $("#yayinevi").val();
+				data = toTitleCase(data);
+				sonuc = sonuc + " " + data.trim() + ".";
+				
+				//$("#sonuc").text(sonuc);
+				document.getElementById("sonuc").innerHTML = sonuc;
+			}); 			
+		});
+		
+		function KitapApaGoster()
+		{
+			$('#APA tr').hide();
+			$("[id^='b-']").hide();
+			/* ************************* */
+			$('.r-yazar').show();
+			$('.r-kitap-adi').show();
+			$('.r-basim-yeri').show();
+			$('.r-yayinevi').show(); 
+			$('.r-basim-yili').show(); 
+			$('#b-KitapAPA').show();
+		}
+		function EditorluKitapApaGoster()
+		{
+			$('#APA tr').hide();
+			$("[id^='b-']").hide();
+			/* ************************* */
+			$('.r-eyazar').show();
+			$('.r-kitap-adi').show();
+			$('.r-basim-yeri').show();
+			$('.r-yayinevi').show();
+			$('.r-basim-yili').show();
+			$('#b-EditorluKitapAPA').show();
+		}
+		function BolumKitapApaGoster()
+		{
+			$('#APA tr').hide();
+			$("[id^='b-']").hide();
+			/* ************************* */
+			$('.r-byazar').show();
+			$('.r-bolum-adi').show();
+			$('.r-eyazar').show();
+			$('.r-kitap-adi').show();
+			$('.r-basim-yeri').show();
+			$('.r-yayinevi').show();
+			$('.r-basim-yili').show();
+			$('.r-sayfa-araligi').show();
+			$('#b-BolumKitapAPA').show();
+		}
+		function CeviriKitapApaGoster()
+		{
+			$('#APA tr').hide();
+			$("[id^='b-']").hide();
+			/* ************************* */
+			$('.r-yazar').show();
+			$('.r-cyazar').show();
+			$('.r-kitap-adi').show();
+			$('.r-basim-yeri').show();
+			$('.r-yayinevi').show(); 
+			$('.r-basim-yili').show(); 
+			$('#b-CeviriKitapAPA').show();
+		}				
+	</script>	
+</head>
+<body>
+<form name="apa" id="apa">
+
+<a href="javascript:void(KitapApaGoster())">Kitap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="javascript:void(EditorluKitapApaGoster())">Editörlü Kitap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="javascript:void(BolumKitapApaGoster())">Kitap Bölümü</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="javascript:void(CeviriKitapApaGoster())">Çeviri Kitap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<hr/>
+<table id="APA" border="0" style="width:800px;">
+<tr class="r-byazar">
+	<td style="width:400px;">
+		<b>Bölüm Yazarının Soyadı</b><br/>
+		<input type="text" name="byazar-soyad" id="byazar-soyad" style="width:300px"> 
+		<br/>&nbsp;
+	</td>
+	<td style="width:400px;">
+		<b>Bölüm Yazarının Adı</b><br/>
+		<input type="text" name="byazar-ad" id="byazar-ad" style="width:300px"> 
+	</td>
+</tr>
+<tr class="r-bolum-adi">
+	<td colspan="2" style="width:800px;">
+		<b>Bölüm Adı</b><br/>
+		<input type="text" name="bolum-adi" id="bolum-adi" style="width:700px"> 
+		<br/>&nbsp;
+	</td>
+</tr>
+<tr class="r-cyazar">
+	<td style="width:400px;">
+		<b>Çevirenin Soyadı</b><br/>
+		<input type="text" name="ceviren-soyad" id="ceviren-soyad" style="width:300px"> 
+		<br/>&nbsp;
+	</td>
+	<td style="width:400px;">
+		<b>Çevirenin Adı</b><br/>
+		<input type="text" name="ceviren-ad" id="ceviren-ad" style="width:300px"> 
+	</td>
+</tr>
+<tr class="r-eyazar">
+	<td style="width:400px;">
+		<b>Editör Soyadı</b><br/>
+		<input type="text" name="editor-soyad" id="editor-soyad" style="width:300px"> 
+		<br/>&nbsp;
+	</td>
+	<td style="width:400px;">
+		<b>Editör Adı</b><br/>
+		<input type="text" name="editor-ad" id="editor-ad" style="width:300px"> 
+	</td>
+</tr>
+<tr class="r-yazar">
+	<td style="width:400px;">
+		<b>Yazar Soyadı</b><br/>
+		<input type="text" name="yazar-soyad" id="yazar-soyad" style="width:300px"> 
+		<br/>&nbsp;
+	</td>
+	<td style="width:400px;">
+		<b>Yazar Adı</b><br/>
+		<input type="text" name="yazar-ad" id="yazar-ad" style="width:300px"> 
+	</td>
+</tr>
+<tr class="r-kitap-adi">
+	<td colspan="2" style="width:800px;">
+		<b>Kitap Adı</b><br/>
+		<input type="text" name="kitap-adi" id="kitap-adi" style="width:700px"> 
+		<br/>&nbsp;
+	</td>
+</tr>
+<tr class="r-basim-yeri">
+	<td colspan="2" style="width:800px;">
+		<b>Basım Yeri</b><br/>
+		<input type="text" name="basim-yeri" id="basim-yeri" style="width:700px"> 
+		<br/>&nbsp;
+	</td>
+</tr>
+<tr class="r-yayinevi">
+	<td colspan="2" style="width:800px;">
+		<b>Yayinevi</b><br/>
+		<input type="text" name="yayinevi" id="yayinevi" style="width:700px"> 
+		<br/>&nbsp;
+	</td>
+</tr>
+<tr class="r-basim-yili">
+	<td colspan="2" style="width:800px;">
+		<b>Basım Yılı</b><br/>
+		<input type="text" name="basim-yili" id="basim-yili" style="width:700px"> 
+		<br/>&nbsp;
+	</td>
+</tr>
+<tr class="r-sayfa-araligi">
+	<td colspan="2" style="width:800px;">
+		<b>Sayfa Aralığı</b><br/>
+		<input type="text" name="sayfa-araligi" id="sayfa-araligi" style="width:700px"> 
+		<br/>&nbsp;
+	</td>
+</tr>
+</table>
+&nbsp;&nbsp;<input type="button" id="b-KitapAPA" value="Kitap APA" style="float:left;" />
+&nbsp;&nbsp;<input type="button" id="b-EditorluKitapAPA" value="Editörlü Kitap APA" style="float:left;" />
+&nbsp;&nbsp;<input type="button" id="b-BolumKitapAPA" value="Kitap Bölümü APA" style="float:left;" />
+&nbsp;&nbsp;<input type="button" id="b-CeviriKitapAPA" value="Çeviri Kitap APA" style="float:left;" />
+<br/>&nbsp;
+<hr/>
+<div id="sonuc" style="background-color:orange; padding:7px;"></div>
+</form>
+<script type="text/javascript">
+	$('#APA tr').hide();
+	$("[id^='b-']").hide();
+</script>
+</body>
+</html>
