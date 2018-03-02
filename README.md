@@ -1,2 +1,3 @@
 # ier-tools-apa-
-Akademik Çalışmalarda Kullanılan "APA Alıntı Sistemi" İçin Bir Deneme 
+<p>Akademik çalışmalarda kullanılan "APA Alıntı Sistemi" için yapılan bir çalışmadır.</p>
+<p>Alıntı ile ilgili bilgilerin (kitap adı, yazar, yayınevi....) standarta göre sıralayan bir web sayfasıdır. </p>
